@@ -1,0 +1,89 @@
+@use "_responsivePortada.scss";
+@use "_animacionesPortadaIzquierda.scss";
+@use "_animacionesPortadaDerecha.scss";
+
+@mixin fullsizeLeft($top: 0vh, $positionX: 0vw, $rotate: 0deg, $size: 10rem, $time: 2s, $name: none) {
+    width: $size;
+    top: $top;
+    left: $positionX;
+    transform: rotate($rotate);
+
+    -webkit-animation: reverse $name $time ease;
+    -moz-animation: reverse $name $time ease;
+    animation: reverse $name $time ease;
+}
+
+@mixin fullsizeRight($top: 0vh, $positionX: 0vw, $rotate: 0deg, $size: 10rem, $time: 2s, $name: none) {
+    width: $size;
+    top: $top;
+    right: $positionX;
+    transform: rotate($rotate);
+
+    -webkit-animation: reverse $name $time ease;
+    -moz-animation: reverse $name $time ease;
+    animation: reverse $name $time ease;
+}
+/*******************************Main********************************/
+.main {
+    width: 100%;
+    min-height: 145vh;
+    height: auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.imagenFondo {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    z-index: -20;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.iconoProgramacion {
+    width: 10rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: scale-down !important;
+    position: absolute;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+.iconoProgramacion:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+/* iconos izquierda */
+
+.JS { @include fullsizeLeft(44vh, 13vw, -10deg, 7rem, 2.5s, entradaJS)}
+.SQL { @include fullsizeLeft(50vh, 21vw, 0deg, 12rem, 3s, entradaSQL)}
+.JAVA { @include fullsizeLeft(90vh, 20vw, -10deg, 14rem, 3.5s, entradaJAVA)}
+.REACT { @include fullsizeLeft(20vh, 2vw, 0deg, 9rem, 2.5s, entradaREACT)}
+.HTML { @include fullsizeLeft(95vh, 2vw, 10deg, 10.5rem, 3s, entradaHTML)}
+.CSS { @include fullsizeLeft(65vh, 1vw, 10deg, 7.5rem, 3.5s, entradaCSS)}
+.ANGU { @include fullsizeLeft(20vh, 20vw, 15deg, 9rem, 2.5s, entradaANGU)}
+.TYPE{ @include fullsizeLeft(75vh, 15vw, 0deg, 7rem, 3s, entradaTYPE)}
+.ASTRO { @include fullsizeLeft(122vh, 11vw, 0deg, 9rem, 2.5s, entradaASTRO)}
+
+/* iconos derecha */
+
+.TAIL { @include fullsizeRight(115vh, 15vw, -15deg, 11rem, 2.5s, entradaTAIL)}
+.NEXT { @include fullsizeRight(45vh, 28vw, 0deg, 9rem, 3s, entradaNEXT)}
+.FLUTTER { @include fullsizeRight(70vh, 20vw, -10deg, 9rem, 3.5s, entradaFLUTTER)}
+.DART { @include fullsizeRight(95vh, 2vw, 0deg, 9rem, 2.5s, entradaDART)}
+.SPRING { @include fullsizeRight(10vh, 20vw, 15deg, 15rem, 3s, entradaSPRING)}
+.PYTHON { @include fullsizeRight(65vh, 2vw, -15deg, 10rem, 3.5s, entradaPYTHON)}
+.SASS { @include fullsizeRight(95vh, 28vw, -15deg, 10rem, 2.5s, entradaSASS)}
+.NODE { @include fullsizeRight(43vh, 12vw, 0deg, 10rem, 2.5s, entradaNODE)}
+.DOCKER { @include fullsizeRight(20vh, 2vw, 0deg, 9rem, 3s, entradaDOCKER)}
