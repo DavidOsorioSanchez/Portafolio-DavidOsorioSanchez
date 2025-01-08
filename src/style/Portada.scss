@@ -1,4 +1,3 @@
-@use "_responsivePortada.scss";
 @use "_animacionesPortadaIzquierda.scss";
 @use "_animacionesPortadaDerecha.scss";
 
@@ -22,6 +21,15 @@
     -webkit-animation: reverse $name $time ease;
     -moz-animation: reverse $name $time ease;
     animation: reverse $name $time ease;
+}
+
+@mixin responsive($size: 10rem, $time: 2s, $margin: 0rem) {
+    margin: $margin;
+    width: $size;
+    height: $size;
+    -webkit-animation: reverse TabletAnimation $time ease;
+    -moz-animation: reverse TabletAnimation $time ease;
+    animation: reverse TabletAnimation $time ease;
 }
 /*******************************Main********************************/
 .main {
@@ -87,3 +95,79 @@
 .SASS { @include fullsizeRight(95vh, 28vw, -15deg, 10rem, 2.5s, entradaSASS)}
 .NODE { @include fullsizeRight(43vh, 12vw, 0deg, 10rem, 2.5s, entradaNODE)}
 .DOCKER { @include fullsizeRight(20vh, 2vw, 0deg, 9rem, 3s, entradaDOCKER)}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        padding: 2rem;
+        padding-top: 10rem;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .iconoProgramacion {
+        position: relative;
+        width: 120px;
+        height: 120px;
+        object-fit: fill;
+        top: auto;
+        left: auto;
+        right: auto;
+        transform: rotate(0deg);
+    }
+
+    @-moz-keyframes TabletAnimation{
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes TabletAnimation {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .JS { @include responsive(8rem, 0.3s, 0rem)}
+    .SQL { @include responsive(10rem, 0.4s, 0rem)}
+    .JAVA { @include responsive(10rem, 0.5s, 0rem)}
+    .REACT { @include responsive(10rem, 0.6s, 0rem)}
+    .HTML { @include responsive(11rem, 0.7s, 0rem)}
+    .TYPE{ @include responsive(8rem, 0.8s, 1rem)}
+    .ANGU { @include responsive(10rem, 0.9s, 0rem)}
+    .CSS { @include responsive(8.5rem, 1s, 0rem)}
+    .TAIL { @include responsive(10rem, 1.1s, 0rem)}
+    .NEXT { @include responsive(9rem, 1.2s, 0.5rem)}
+    .FLUTTER { @include responsive(10rem, 1.3s, 0rem)}
+    .DART { @include responsive(9rem, 1.4s, 0rem)}
+    .SPRING { @include responsive(13rem, 1.5s, -0.5rem)}
+    .PYTHON { @include responsive(10rem, 1.6s, 0rem)}
+    .ASTRO { @include responsive(10rem, 1.7s, 0rem)}
+    .SASS { @include responsive(10rem, 1.8s, 0rem)}
+    .NODE { @include responsive(9rem, 1.9s, 0rem)}
+    .DOCKER { @include responsive(7rem, 2s, 0rem)}
+}
+
+
+@media only screen and (min-width: 2500px) {
+
+    .iconoProgramacion {
+        transform: scale(1.5);
+    }
+
+    .iconoProgramacion:hover {
+        transform: scale(1.7);
+    }
+
+}

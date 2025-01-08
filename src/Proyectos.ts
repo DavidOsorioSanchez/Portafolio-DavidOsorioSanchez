@@ -1,5 +1,3 @@
-import { idText } from "typescript";
-
 export const Proyectos = [
     {
         id: 0,

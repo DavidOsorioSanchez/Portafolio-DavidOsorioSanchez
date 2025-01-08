@@ -99,9 +99,8 @@
 
     100% {
         opacity: 0;
-        transform: translate(0, -100deg);
-        -webkit-transform: rotate(65deg);
-        transform: rotate(65deg);
+        -webkit-transform: translate(0, -100deg), rotate(65deg);
+        transform: translate(0, -100deg), rotate(65deg);
     }
 }
 
@@ -116,9 +115,8 @@
 
     100% {
         opacity: 0;
-        transform: translate(0, -100deg);
-        -webkit-transform: rotate(65deg);
-        transform: rotate(65deg);
+        -webkit-transform: translate(0, -100deg), rotate(65deg);
+        transform: translate(0, -100deg), rotate(65deg);
     }
 }
 

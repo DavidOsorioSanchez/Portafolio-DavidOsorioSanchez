@@ -1,0 +1,17 @@
+---
+interface Props{
+    link: string;
+    image: string;
+}
+
+const {link, image} = Astro.props;
+---
+
+<article class="w-full flex justify-center">
+    <a href={link } target="_blank" class="flex flex-col items-center bg-BlancoTransparente p-2 w-[25rem] gap-3 rounded-md">
+        <img src={image} alt="no cargo" class="w-[20rem] aspect-square object-cover rounded-tl-md rounded-tr-md">
+        <div class="flex flex-col w-full">
+            lorem   w-[20rem] aspect-square object-cover rounded-tl-md rounded-tr-md w-[20rem] aspect-square object-cover rounded-tl-md rounded-tr-md w-[20rem] aspect-square object-cover rounded-tl-md rounded-tr-md w-[20rem] aspect-square object-cover rounded-tl-md rounded-tr-md 
+        </div> 
+    </a>
+</article>
