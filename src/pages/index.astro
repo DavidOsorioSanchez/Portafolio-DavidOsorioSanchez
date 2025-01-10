@@ -4,7 +4,7 @@ import Portada from '../components/Portada.astro';
 import Informacion from '../components/Informacion.astro';
 import Portafolio from '../components/react/Portafolio.tsx';
 import Experiencia from '../components/Experiencia.astro';
-import Estudios from 'components/Estudios.astro';
+//import Estudios from '../components/react/Estudios.tsx';
 ---
 
 <html lang="es">
@@ -21,6 +21,6 @@ import Estudios from 'components/Estudios.astro';
 		<Informacion />
 		<Experiencia />
 		<Portafolio client:load />
-		<!-- <Estudios/> -->
+		<!-- <Estudios client:load /> -->
 	</body>
 </html>

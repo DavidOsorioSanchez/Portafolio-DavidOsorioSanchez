@@ -2,9 +2,7 @@ interface Props {
     etiquetas: [number, string, string];
 }
 
-export default function Organizador({ etiquetas }:Props) {
-
-
+export default function Organizador({ etiquetas }:Readonly<Props>) {
     return (
         <div className="flex flex-wrap justify-center items-center gap-2">
             {etiquetas.map((etiqueta : any) =>{
