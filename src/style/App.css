@@ -24,18 +24,35 @@
 
 #top {
     display: flex;
-    flex-direction: column;
     position: absolute;
     z-index: 1;
     left: 1vw;
     top: 1vh;
 }
+@media screen and (max-width: 750px) {
+    #top {
+        left: 0vw;
+        top: 0vh;
+    }
+    
+}
+
+@media screen and (max-width: 378px) {
+    #top{
+        position: relative;
+    }
+}
+
 
 #navbar {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    width: 100vw;
     width: auto;
     height: auto;
+    gap:0rem 1rem;
+    flex-wrap: wrap ;
+    justify-content: center;
 }
 
 .titulo {
